@@ -30,9 +30,7 @@ extension Array where Element: Comparable {
     /// - Complexity: O(*n* * *n*), where *n* is the length of the array.
     mutating func insertionSorted() {
         guard count > 1 else { return }
-        
-        self.sort()
-        
+                
         for index in 1..<count {
             let currentElement = self[index]
             var previousIndex = index - 1

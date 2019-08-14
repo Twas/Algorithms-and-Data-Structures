@@ -16,7 +16,7 @@ class ArrayInsertionSortedTests: XCTestCase {
         
         array.insertionSorted()
         
-        XCTAssertEqual(array, [-5 , 1, 2, 3, 7, 19], "Array should be sorted.")
+        XCTAssertEqual(array, [-5, 1, 2, 3, 7, 19], "Array should be sorted.")
     }
     
     func testThatSortedArrayRemainsSorted() {
