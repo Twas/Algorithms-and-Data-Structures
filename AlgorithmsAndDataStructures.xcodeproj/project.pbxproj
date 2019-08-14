@@ -10,6 +10,9 @@
 		57CB75CE2304283100000035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB75CD2304283100000035 /* AppDelegate.swift */; };
 		57CB75F42304289300000035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75EF2304289300000035 /* Assets.xcassets */; };
 		57CB75F82304289E00000035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75F62304289E00000035 /* LaunchScreen.storyboard */; };
+		57CB760123042BDC00000035 /* Array+InsertionSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB760023042BDC00000035 /* Array+InsertionSorted.swift */; };
+		57CB760423042CE300000035 /* ArrayInsertionSortedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB760323042CE300000035 /* ArrayInsertionSortedTests.swift */; };
+		57CB760723042EAB00000035 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB760623042EAB00000035 /* main.swift */; };
 		8441068D5E6BA5755153C973 /* Pods_AlgorithmsAndDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931AD845268A44E636B73D94 /* Pods_AlgorithmsAndDataStructuresTests.framework */; };
 		C4CA8FCAAED4C7421D91EC6A /* Pods_AlgorithmsAndDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9112F1FEE1A5F124F36D52A8 /* Pods_AlgorithmsAndDataStructures.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,9 @@
 		57CB75EE2304289300000035 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CB75EF2304289300000035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57CB75F72304289E00000035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57CB760023042BDC00000035 /* Array+InsertionSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+InsertionSorted.swift"; sourceTree = "<group>"; };
+		57CB760323042CE300000035 /* ArrayInsertionSortedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayInsertionSortedTests.swift; sourceTree = "<group>"; };
+		57CB760623042EAB00000035 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7900D667DEABFE2D80CC85A5 /* Pods-AlgorithmsAndDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructures.debug.xcconfig"; path = "Target Support Files/Pods-AlgorithmsAndDataStructures/Pods-AlgorithmsAndDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC25CE143F0373658FED756 /* Pods-AlgorithmsAndDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresTests.release.xcconfig"; path = "Target Support Files/Pods-AlgorithmsAndDataStructuresTests/Pods-AlgorithmsAndDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		9112F1FEE1A5F124F36D52A8 /* Pods_AlgorithmsAndDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgorithmsAndDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +98,7 @@
 		57CB75CC2304283100000035 /* AlgorithmsAndDataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				57CB75CD2304283100000035 /* AppDelegate.swift */,
+				57CB760523042E8700000035 /* AppDelegate */,
 				57CB75FA230428BE00000035 /* Data Structures */,
 				57CB75F9230428B200000035 /* Algorithms */,
 				57CB75ED2304287100000035 /* Resources */,
@@ -123,6 +129,7 @@
 		57CB75F9230428B200000035 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				57CB75FF23042BAD00000035 /* Insertion Sort */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 		57CB75FC230428D700000035 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				57CB760223042CC700000035 /* Insertion Sort */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -146,6 +154,31 @@
 			children = (
 			);
 			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		57CB75FF23042BAD00000035 /* Insertion Sort */ = {
+			isa = PBXGroup;
+			children = (
+				57CB760023042BDC00000035 /* Array+InsertionSorted.swift */,
+			);
+			path = "Insertion Sort";
+			sourceTree = "<group>";
+		};
+		57CB760223042CC700000035 /* Insertion Sort */ = {
+			isa = PBXGroup;
+			children = (
+				57CB760323042CE300000035 /* ArrayInsertionSortedTests.swift */,
+			);
+			path = "Insertion Sort";
+			sourceTree = "<group>";
+		};
+		57CB760523042E8700000035 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				57CB760623042EAB00000035 /* main.swift */,
+				57CB75CD2304283100000035 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		C5C08CA2EA1C829D6F6B2FB3 /* Pods */ = {
@@ -215,6 +248,7 @@
 					};
 					57CB75DD2304283200000035 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = 57CB75C92304283100000035;
 					};
 				};
@@ -328,6 +362,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CB75CE2304283100000035 /* AppDelegate.swift in Sources */,
+				57CB760123042BDC00000035 /* Array+InsertionSorted.swift in Sources */,
+				57CB760723042EAB00000035 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57CB760423042CE300000035 /* ArrayInsertionSortedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +559,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmsAndDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,6 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YL.AlgorithmsAndDataStructuresTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlgorithmsAndDataStructures.app/AlgorithmsAndDataStructures";
@@ -543,6 +582,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmsAndDataStructuresTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
