@@ -14,7 +14,7 @@ class ArrayInsertionSortedTests: XCTestCase {
     func testThatArrayIsSorted() {
         var array = [2, -5, 1, 7, 3, 19]
         
-        array.insertionSorted()
+        array.insertionSort()
         
         XCTAssertEqual(array, [-5, 1, 2, 3, 7, 19], "Array should be sorted.")
     }
@@ -22,7 +22,7 @@ class ArrayInsertionSortedTests: XCTestCase {
     func testThatSortedArrayRemainsSorted() {
         var array = [1, 2, 4, 5, 20]
         
-        array.insertionSorted()
+        array.insertionSort()
         
         XCTAssertEqual(array, [1, 2, 4, 5, 20], "Array should remain sorted.")
     }
@@ -30,7 +30,7 @@ class ArrayInsertionSortedTests: XCTestCase {
     func testThatEmptyArrayRemainsEmpty() {
         var array: [Int] = []
         
-        array.insertionSorted()
+        array.insertionSort()
         
         XCTAssertTrue(array.isEmpty, "Array should remain empty.")
     }
@@ -38,7 +38,7 @@ class ArrayInsertionSortedTests: XCTestCase {
     func testThatArrayWithSingleElementDoesNotChange() {
         var array = [1]
         
-        array.insertionSorted()
+        array.insertionSort()
         
         XCTAssertEqual(array, [1], "Array should not change.")
     }
@@ -46,7 +46,7 @@ class ArrayInsertionSortedTests: XCTestCase {
     func testThatArrayWithEqualElementsDoesNotChange() {
         var array = [2, 2, 2, 2]
         
-        array.insertionSorted()
+        array.insertionSort()
         
         XCTAssertEqual(array, [2, 2, 2, 2], "Array should not change.")
     }

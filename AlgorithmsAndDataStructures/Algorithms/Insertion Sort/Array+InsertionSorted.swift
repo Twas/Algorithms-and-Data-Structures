@@ -19,7 +19,7 @@ extension Array where Element: Comparable {
     /// Here's an example of sorting a list of integers.
     ///
     ///     var numbers = [2, -5, 1, 7, 3, 19]
-    ///     numbers.insertionSorted()
+    ///     numbers.insertionSort()
     ///     print(numbers)
     ///     // Prints "[-5 , 1, 2, 3, 7, 19]"
     ///
@@ -28,7 +28,7 @@ extension Array where Element: Comparable {
     /// preserves the relative order of elements that compare equal.
     ///
     /// - Complexity: O(*n* * *n*), where *n* is the length of the array.
-    mutating func insertionSorted() {
+    mutating func insertionSort() {
         guard count > 1 else { return }
                 
         for index in 1..<count {
