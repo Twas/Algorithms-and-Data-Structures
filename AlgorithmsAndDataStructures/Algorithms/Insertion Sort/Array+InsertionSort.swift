@@ -1,5 +1,5 @@
 //
-//  Array+InsertionSorted.swift
+//  Array+InsertionSort.swift
 //  AlgorithmsAndDataStructures
 //
 //  Created by Евгений on 8/14/19.
