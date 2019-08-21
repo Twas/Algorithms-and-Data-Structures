@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */; };
+		57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */; };
 		57CB75CE2304283100000035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB75CD2304283100000035 /* AppDelegate.swift */; };
 		57CB75F42304289300000035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75EF2304289300000035 /* Assets.xcassets */; };
 		57CB75F82304289E00000035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75F62304289E00000035 /* LaunchScreen.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BubbleSort.swift"; sourceTree = "<group>"; };
+		57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBubbleSortTests.swift; sourceTree = "<group>"; };
 		57CB75CA2304283100000035 /* AlgorithmsAndDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsAndDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CB75CD2304283100000035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57CB75DE2304283200000035 /* AlgorithmsAndDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsAndDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,22 @@
 				931AD845268A44E636B73D94 /* Pods_AlgorithmsAndDataStructuresTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57A6DFBB230D213B0090B420 /* Bubble Sort */ = {
+			isa = PBXGroup;
+			children = (
+				57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */,
+			);
+			path = "Bubble Sort";
+			sourceTree = "<group>";
+		};
+		57A6DFBE230D216D0090B420 /* Bubble Sort */ = {
+			isa = PBXGroup;
+			children = (
+				57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */,
+			);
+			path = "Bubble Sort";
 			sourceTree = "<group>";
 		};
 		57CB75C12304283100000035 = {
@@ -206,6 +226,7 @@
 		57DCB6D2230BDD42007AEE63 /* Sorting */ = {
 			isa = PBXGroup;
 			children = (
+				57A6DFBB230D213B0090B420 /* Bubble Sort */,
 				57DCB6CB230BD4B0007AEE63 /* Merge Sort */,
 				57CB75FF23042BAD00000035 /* Insertion Sort */,
 			);
@@ -216,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				57DCB6D4230BDD77007AEE63 /* SortingArrayTests.swift */,
+				57A6DFBE230D216D0090B420 /* Bubble Sort */,
 				57DCB6CE230BD4EF007AEE63 /* MergeSort */,
 				57CB760223042CC700000035 /* Insertion Sort */,
 			);
@@ -403,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CB75CE2304283100000035 /* AppDelegate.swift in Sources */,
+				57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */,
 				57CB760123042BDC00000035 /* Array+InsertionSort.swift in Sources */,
 				57DCB6CD230BD4CF007AEE63 /* Array+MergeSort.swift in Sources */,
 				57CB760723042EAB00000035 /* main.swift in Sources */,
@@ -416,6 +439,7 @@
 				57DCB6D5230BDD77007AEE63 /* SortingArrayTests.swift in Sources */,
 				57DCB6D0230BD538007AEE63 /* ArrayMergeSortTests.swift in Sources */,
 				57CB760423042CE300000035 /* ArrayInsertionSortTests.swift in Sources */,
+				57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
