@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572963B0231D031B006A7A00 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572963AF231D031B006A7A00 /* LinkedList.swift */; };
+		572963B4231D0344006A7A00 /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572963B3231D0344006A7A00 /* LinkedListTests.swift */; };
 		57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */; };
 		57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */; };
 		57CB75CE2304283100000035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB75CD2304283100000035 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		572963AF231D031B006A7A00 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		572963B3231D0344006A7A00 /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
 		57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BubbleSort.swift"; sourceTree = "<group>"; };
 		57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBubbleSortTests.swift; sourceTree = "<group>"; };
 		57CB75CA2304283100000035 /* AlgorithmsAndDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsAndDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,46 @@
 				931AD845268A44E636B73D94 /* Pods_AlgorithmsAndDataStructuresTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		572963AC231D02EA006A7A00 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				572963AE231D030C006A7A00 /* Doubly-Linked List */,
+				572963AD231D02F6006A7A00 /* Linked List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		572963AD231D02F6006A7A00 /* Linked List */ = {
+			isa = PBXGroup;
+			children = (
+				572963AF231D031B006A7A00 /* LinkedList.swift */,
+			);
+			path = "Linked List";
+			sourceTree = "<group>";
+		};
+		572963AE231D030C006A7A00 /* Doubly-Linked List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Doubly-Linked List";
+			sourceTree = "<group>";
+		};
+		572963B1231D032E006A7A00 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				572963B2231D0334006A7A00 /* Linked List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		572963B2231D0334006A7A00 /* Linked List */ = {
+			isa = PBXGroup;
+			children = (
+				572963B3231D0344006A7A00 /* LinkedListTests.swift */,
+			);
+			path = "Linked List";
 			sourceTree = "<group>";
 		};
 		57A6DFBB230D213B0090B420 /* Bubble Sort */ = {
@@ -172,6 +216,7 @@
 		57CB75FA230428BE00000035 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				572963AC231D02EA006A7A00 /* Lists */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -188,6 +233,7 @@
 		57CB75FD230428DE00000035 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				572963B1231D032E006A7A00 /* Lists */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -490,6 +536,7 @@
 				57CB760123042BDC00000035 /* Array+InsertionSort.swift in Sources */,
 				57DCB6CD230BD4CF007AEE63 /* Array+MergeSort.swift in Sources */,
 				57DDB2502317FBF800B839DA /* Collection+FindMatch.swift in Sources */,
+				572963B0231D031B006A7A00 /* LinkedList.swift in Sources */,
 				57CB760723042EAB00000035 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +549,7 @@
 				57DCB6D0230BD538007AEE63 /* ArrayMergeSortTests.swift in Sources */,
 				57D724A92315650B002A215A /* ArraySelectionSortTests.swift in Sources */,
 				57CB760423042CE300000035 /* ArrayInsertionSortTests.swift in Sources */,
+				572963B4231D0344006A7A00 /* LinkedListTests.swift in Sources */,
 				57DDB2542317FD4600B839DA /* CollectionFindMatchTests.swift in Sources */,
 				57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */,
 			);
