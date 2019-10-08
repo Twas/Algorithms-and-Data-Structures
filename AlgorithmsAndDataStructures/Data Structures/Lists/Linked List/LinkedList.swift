@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Linked data structure consisting of nodes. Each node holds value and reference to the next node.
 struct LinkedList<Value> {
     
     var first: Node?
@@ -18,6 +19,7 @@ struct LinkedList<Value> {
 
 extension LinkedList {
     
+    /// Element of `LinkedList`. Each node holds value and reference to the next node.
     class Node {
         
         var value: Value
@@ -34,6 +36,11 @@ extension LinkedList {
 
 extension LinkedList where Value: Comparable {
     
+    /// Searches for the first node that holds `value`
+    ///
+    /// Generic type `Value` should conform to `Comparable` protocol.
+    /// - Parameter value: value of the node
+    /// - Complexity: O(*n*) where *n* is the number of nodes in the list.
     func findFirstNode(with value: Value) -> Node? {
         var currentNode = first
         while let node = currentNode {
@@ -52,6 +59,9 @@ extension LinkedList where Value: Comparable {
 
 extension LinkedList {
     
+    /// Appends new node holding `value` to the end of the list.
+    /// - Parameter value: value that newly created node should hold
+    /// - Complexity: O(1)
     mutating func append(_ value: Value) {
         let newNode = Node(value: value)
         
@@ -64,14 +74,15 @@ extension LinkedList {
         last?.next = newNode
         last = newNode
     }
-    
-    // TODO - insert(_ value:,at index:)
 }
 
 // MARK: - Delete
 
 extension LinkedList {
     
+    /// Deletes `node` from the list
+    /// - Parameter node: the node to be deleted
+    /// - Complexity: O(*n*) where *n* is the number of nodes in the list
     mutating func delete(_ node: Node) {
         guard first != nil, last != nil else { return }
         
@@ -90,13 +101,9 @@ extension LinkedList {
             previousNode = previousNode?.next
         }
         
-        guard previousNode != nil else { return }
-        
         previousNode?.next = node.next
         if node === last {
             last = previousNode
         }
     }
-    
-    // TODO - add convenience methods deleteFirst(), deleteLast()
 }
