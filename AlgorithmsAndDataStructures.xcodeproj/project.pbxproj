@@ -100,7 +100,6 @@
 		572963AC231D02EA006A7A00 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				572963AE231D030C006A7A00 /* Doubly-Linked List */,
 				572963AD231D02F6006A7A00 /* Linked List */,
 			);
 			path = Lists;
@@ -112,13 +111,6 @@
 				572963AF231D031B006A7A00 /* LinkedList.swift */,
 			);
 			path = "Linked List";
-			sourceTree = "<group>";
-		};
-		572963AE231D030C006A7A00 /* Doubly-Linked List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Doubly-Linked List";
 			sourceTree = "<group>";
 		};
 		572963B1231D032E006A7A00 /* Lists */ = {
