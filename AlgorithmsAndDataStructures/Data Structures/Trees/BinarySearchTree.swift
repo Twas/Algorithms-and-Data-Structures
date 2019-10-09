@@ -64,13 +64,13 @@ extension BinarySearchTree {
             guard value != self.value else { return }
             
             // define wether new node should be placed to the left or right
-            var leaf = value < self.value ? left : right
+            let leafKeyPath: ReferenceWritableKeyPath<Node, Node?> = value < self.value ? \.left : \.right
             // if node exists, continue search
             // otherwise, add new node
-            if let leaf = leaf {
+            if let leaf = self[keyPath: leafKeyPath] {
                 leaf.insert(value)
             } else {
-                leaf = Node(value: value, parent: self, left: nil, right: nil)
+                self[keyPath: leafKeyPath] = Node(value: value, parent: self, left: nil, right: nil)
             }
         }
         
@@ -119,7 +119,7 @@ extension BinarySearchTree {
             self.value = successor.value
             
             // delete the inorder successor
-            self.right = delete(successor.value)
+            self.right = right.delete(successor.value)
             
             return self
         }
@@ -186,7 +186,12 @@ extension BinarySearchTree {
     /// - Parameter value: the value of the new node
     /// - Complexity: O(*h*) where *h* is the height of the binary search tree
     mutating func insert(_ value: Value) {
-        root?.insert(value)
+        guard let root = root else {
+            self.root = Node(value: value)
+            return
+        }
+        
+        root.insert(value)
     }
     
     /// Removes the node containing `value` and reorganizes the tree to preserve sorted order.
