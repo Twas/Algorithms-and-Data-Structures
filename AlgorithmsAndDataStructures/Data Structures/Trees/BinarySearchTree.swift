@@ -196,7 +196,7 @@ extension BinarySearchTree {
     
     /// Removes the node containing `value` and reorganizes the tree to preserve sorted order.
     /// - Parameter value: value of the node to be deleted
-    /// - Complexity: O(*h*) where *h* is the height of the binary search tree
+    /// - Complexity: O(*h* * *h*) where *h* is the height of the binary search tree
     mutating func delete(_ value: Value) {
         root = root?.delete(value)
     }
