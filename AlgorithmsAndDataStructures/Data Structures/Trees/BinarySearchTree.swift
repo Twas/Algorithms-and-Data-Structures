@@ -133,14 +133,16 @@ extension BinarySearchTree {
     /// Searches for a node with the `value` in the binary search tree.
     /// - Parameter value: value to search
     /// - Returns: node containing `value` or nil if it does not exist.
-    /// - Complexity: O(*h*) where *h* is the height of the tree.
+    /// - Complexity: O(*h*) where *h* is the height of the tree,
+    /// and *h* = log*n* where *n* is the number of elements in the binary search tree
     func search(for value: Value) -> Node? {
         return root?.search(for: value)
     }
     
     /// Finds minimum value in the tree. This is the value of the leftmost node.
     /// - Returns: the node with the smallest value or nil for empty binary search tree
-    /// - Complexity: O(*h*) where *h* is the height of the tree.
+    /// - Complexity: O(*h*) where *h* is the height of the tree,
+    /// and *h* = log*n* where *n* is the number of elements in the binary search tree
     func min() -> Node? {
         var min = root
         while let leftNode = min?.left {
@@ -152,7 +154,8 @@ extension BinarySearchTree {
     
     /// Finds maximum value in the tree. This is the value of the rightmost node.
     /// - Returns: the node with the largest value or nil for empty binary search tree
-    /// - Complexity: O(*h*) where *h* is the height of the tree.
+    /// - Complexity: O(*h*) where *h* is the height of the tree,
+    /// and *h* = log*n* where *n* is the number of elements in the binary search tree
     func max() -> Node? {
         var max = root
         while let rightNode = max?.right {
@@ -169,7 +172,8 @@ extension BinarySearchTree {
     
     /// Visits all nodes of the tree in-order.
     /// - Returns: sorted array of all values
-    /// - Complexity: O(*n*) where *n* is the number of nodes in the tree
+    /// - Complexity: O(*n*) where *n* is the number of nodes in the tree,
+    /// and *h* = log*n* where *n* is the number of elements in the binary search tree
     func traverse() -> [Value] {
         return root?.traverse() ?? []
     }
@@ -184,7 +188,8 @@ extension BinarySearchTree {
     /// Algorithms first searches for a missing node where the value would be. Then it inserts new node to that place.
     /// If the node with `value` is already present in the binary search tree, method returns.
     /// - Parameter value: the value of the new node
-    /// - Complexity: O(*h*) where *h* is the height of the binary search tree
+    /// - Complexity: O(*h*) where *h* is the height of the binary search tree,
+    /// and *h* = log*n* where *n* is the number of elements in the binary search tree
     mutating func insert(_ value: Value) {
         guard let root = root else {
             self.root = Node(value: value)
