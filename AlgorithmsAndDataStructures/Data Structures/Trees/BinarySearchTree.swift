@@ -15,7 +15,7 @@ import Foundation
 /// For any node, values of all nodes in its left subtree are less than its `value`, while values in its right subree are higher than its `value`.
 struct BinarySearchTree<Value: Comparable> {
 
-    let root: Node
+    var root: Node?
     
     init(_ value: Value) {
         self.root = Node(value: value)
@@ -28,7 +28,7 @@ extension BinarySearchTree {
     
     /// Element of the binary search tree.
     class Node {
-        let value: Value
+        var value: Value
         
         var parent: Node?
         var left: Node?
@@ -73,6 +73,56 @@ extension BinarySearchTree {
                 leaf = Node(value: value, parent: self, left: nil, right: nil)
             }
         }
+        
+        fileprivate func delete(_ value: Value) -> Node? {
+            // deletes the node with `value` and returns new root
+            
+            guard value != self.value else { return delete() }
+            
+            if value < self.value {
+                // the node to be deleted lies in the left subtree
+                left = left?.delete(value)
+            } else if value > self.value {
+                // the node to be deleted lies in the right subree
+                right = right?.delete(value)
+            }
+            
+            return self
+        }
+        
+        private func delete() -> Node? {
+            // deletes itself from the tree sctructure and returns the new root
+            
+            guard left != nil else {
+                // this is the node with only one child (right) or no children
+                let temp = right
+                right = nil
+                return temp
+            }
+            
+            guard let right = right else {
+                // this is the node with only one child (left)
+                let temp = left
+                left = nil
+                return temp
+            }
+            
+            // this is the node with 2 children
+            
+            // get the inorder successor (smallest in the right subtree)
+            var successor = right
+            while let leftNode = successor.left {
+                successor = leftNode
+            }
+            
+            // copy the inorder successor to this node
+            self.value = successor.value
+            
+            // delete the inorder successor
+            self.right = delete(successor.value)
+            
+            return self
+        }
     }
 }
 
@@ -85,15 +135,15 @@ extension BinarySearchTree {
     /// - Returns: node containing `value` or nil if it does not exist.
     /// - Complexity: O(*h*) where *h* is the height of the tree.
     func search(for value: Value) -> Node? {
-        return root.search(for: value)
+        return root?.search(for: value)
     }
     
     /// Finds minimum value in the tree. This is the value of the leftmost node.
-    /// - Returns: the node with the smallest value
+    /// - Returns: the node with the smallest value or nil for empty binary search tree
     /// - Complexity: O(*h*) where *h* is the height of the tree.
-    func min() -> Node {
+    func min() -> Node? {
         var min = root
-        while let leftNode = min.left {
+        while let leftNode = min?.left {
             min = leftNode
         }
         
@@ -101,11 +151,11 @@ extension BinarySearchTree {
     }
     
     /// Finds maximum value in the tree. This is the value of the rightmost node.
-    /// - Returns: the node with the largest value
+    /// - Returns: the node with the largest value or nil for empty binary search tree
     /// - Complexity: O(*h*) where *h* is the height of the tree.
-    func max() -> Node {
+    func max() -> Node? {
         var max = root
-        while let rightNode = max.right {
+        while let rightNode = max?.right {
             max = rightNode
         }
         
@@ -121,7 +171,7 @@ extension BinarySearchTree {
     /// - Returns: sorted array of all values
     /// - Complexity: O(*n*) where *n* is the number of nodes in the tree
     func traverse() -> [Value] {
-        return root.traverse()
+        return root?.traverse() ?? []
     }
 }
 
@@ -136,6 +186,13 @@ extension BinarySearchTree {
     /// - Parameter value: the value of the new node
     /// - Complexity: O(*h*) where *h* is the height of the binary search tree
     mutating func insert(_ value: Value) {
-        root.insert(value)
+        root?.insert(value)
+    }
+    
+    /// Removes the node containing `value` and reorganizes the tree to preserve sorted order.
+    /// - Parameter value: value of the node to be deleted
+    /// - Complexity: O(*h*) where *h* is the height of the binary search tree
+    mutating func delete(_ value: Value) {
+        root = root?.delete(value)
     }
 }
