@@ -13,7 +13,7 @@ extension Collection where Element: Comparable {
     /// Finds out if collection contains subsequence
     ///
     /// - Parameter subsequence: The match that needs to be found in the collection.
-    /// - Returns: Index of the first element of the matching subsequence. `Nil`, if match has not been found.
+    /// - Returns: Index of the first element of the matching subsequence. `nil`, if match has not been found.
     /// - Complexity: O(*n* * *m*) where *n* is the length of the collection and *m* is the length of the subsequence.
     func findMatch(_ subsequence: Self) -> Index? {
         guard !isEmpty, !subsequence.isEmpty else { return nil }

@@ -23,9 +23,6 @@ extension Array where Element: Comparable {
     ///     print(numbers)
     ///     // Prints "[-5 , 1, 2, 3, 7, 19]"
     ///
-    /// The sorting algorithm is not guaranteed to be stable. A stable sort
-    /// preserves the relative order of elements that compare equal.
-    ///
     /// - Complexity: O(*n* * *n*), where *n* is the length of the collection.
     mutating func selectionSort() {
         guard count > 1 else { return }
