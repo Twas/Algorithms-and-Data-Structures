@@ -30,6 +30,8 @@
 		57DCB6D5230BDD77007AEE63 /* SortingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DCB6D4230BDD77007AEE63 /* SortingArrayTests.swift */; };
 		57DDB2502317FBF800B839DA /* Collection+FindMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDB24F2317FBF800B839DA /* Collection+FindMatch.swift */; };
 		57DDB2542317FD4600B839DA /* CollectionFindMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DDB2532317FD4600B839DA /* CollectionFindMatchTests.swift */; };
+		57F90D81234F0FFC006E1EFC /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F90D80234F0FFC006E1EFC /* Heap.swift */; };
+		57F90D84234F199E006E1EFC /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F90D83234F199E006E1EFC /* HeapTests.swift */; };
 		8441068D5E6BA5755153C973 /* Pods_AlgorithmsAndDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931AD845268A44E636B73D94 /* Pods_AlgorithmsAndDataStructuresTests.framework */; };
 		C4CA8FCAAED4C7421D91EC6A /* Pods_AlgorithmsAndDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9112F1FEE1A5F124F36D52A8 /* Pods_AlgorithmsAndDataStructures.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		57DCB6D4230BDD77007AEE63 /* SortingArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingArrayTests.swift; sourceTree = "<group>"; };
 		57DDB24F2317FBF800B839DA /* Collection+FindMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+FindMatch.swift"; sourceTree = "<group>"; };
 		57DDB2532317FD4600B839DA /* CollectionFindMatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFindMatchTests.swift; sourceTree = "<group>"; };
+		57F90D80234F0FFC006E1EFC /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		57F90D83234F199E006E1EFC /* HeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapTests.swift; sourceTree = "<group>"; };
 		7900D667DEABFE2D80CC85A5 /* Pods-AlgorithmsAndDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructures.debug.xcconfig"; path = "Target Support Files/Pods-AlgorithmsAndDataStructures/Pods-AlgorithmsAndDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC25CE143F0373658FED756 /* Pods-AlgorithmsAndDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmsAndDataStructuresTests.release.xcconfig"; path = "Target Support Files/Pods-AlgorithmsAndDataStructuresTests/Pods-AlgorithmsAndDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		9112F1FEE1A5F124F36D52A8 /* Pods_AlgorithmsAndDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgorithmsAndDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +290,7 @@
 		57CB75FA230428BE00000035 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				57F90D7F234F0FF0006E1EFC /* Heap */,
 				57A133C7234CB17B006BA47B /* Trees */,
 				57A133B7234CA744006BA47B /* Containers */,
 				572963AC231D02EA006A7A00 /* Lists */,
@@ -305,6 +310,7 @@
 		57CB75FD230428DE00000035 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				57F90D82234F1977006E1EFC /* Heap */,
 				57A133CA234CB6F5006BA47B /* Trees */,
 				57A133B8234CA752006BA47B /* Containers */,
 				572963B1231D032E006A7A00 /* Lists */,
@@ -422,6 +428,22 @@
 				57DDB2532317FD4600B839DA /* CollectionFindMatchTests.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		57F90D7F234F0FF0006E1EFC /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				57F90D80234F0FFC006E1EFC /* Heap.swift */,
+			);
+			path = Heap;
+			sourceTree = "<group>";
+		};
+		57F90D82234F1977006E1EFC /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				57F90D83234F199E006E1EFC /* HeapTests.swift */,
+			);
+			path = Heap;
 			sourceTree = "<group>";
 		};
 		C5C08CA2EA1C829D6F6B2FB3 /* Pods */ = {
@@ -607,6 +629,7 @@
 				57D724A6231564B3002A215A /* Array+SelectionSort.swift in Sources */,
 				57A133BC234CA776006BA47B /* Stack.swift in Sources */,
 				57CB75CE2304283100000035 /* AppDelegate.swift in Sources */,
+				57F90D81234F0FFC006E1EFC /* Heap.swift in Sources */,
 				57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */,
 				57CB760123042BDC00000035 /* Array+InsertionSort.swift in Sources */,
 				57A133C4234CAB2C006BA47B /* Queue.swift in Sources */,
@@ -631,6 +654,7 @@
 				57A133CC234CB706006BA47B /* BinarySearchTreeTests.swift in Sources */,
 				57DDB2542317FD4600B839DA /* CollectionFindMatchTests.swift in Sources */,
 				57A133C6234CAB37006BA47B /* QueueTests.swift in Sources */,
+				57F90D84234F199E006E1EFC /* HeapTests.swift in Sources */,
 				57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
