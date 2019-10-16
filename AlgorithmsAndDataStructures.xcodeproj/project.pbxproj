@@ -21,6 +21,8 @@
 		57A133CC234CB706006BA47B /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A133CB234CB706006BA47B /* BinarySearchTreeTests.swift */; };
 		57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */; };
 		57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */; };
+		57AC38EE2356F58300B76322 /* Collection+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC38ED2356F58300B76322 /* Collection+BinarySearch.swift */; };
+		57AC38F02356F75700B76322 /* CollectionBinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC38EF2356F75700B76322 /* CollectionBinarySearchTests.swift */; };
 		57CB75CE2304283100000035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB75CD2304283100000035 /* AppDelegate.swift */; };
 		57CB75F42304289300000035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75EF2304289300000035 /* Assets.xcassets */; };
 		57CB75F82304289E00000035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CB75F62304289E00000035 /* LaunchScreen.storyboard */; };
@@ -65,6 +67,8 @@
 		57A133CB234CB706006BA47B /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
 		57A6DFBC230D214D0090B420 /* Array+BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+BubbleSort.swift"; sourceTree = "<group>"; };
 		57A6DFBF230D21900090B420 /* ArrayBubbleSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayBubbleSortTests.swift; sourceTree = "<group>"; };
+		57AC38ED2356F58300B76322 /* Collection+BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+BinarySearch.swift"; sourceTree = "<group>"; };
+		57AC38EF2356F75700B76322 /* CollectionBinarySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBinarySearchTests.swift; sourceTree = "<group>"; };
 		57CB75CA2304283100000035 /* AlgorithmsAndDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsAndDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CB75CD2304283100000035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57CB75DE2304283200000035 /* AlgorithmsAndDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsAndDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				57DDB24F2317FBF800B839DA /* Collection+FindMatch.swift */,
+				57AC38ED2356F58300B76322 /* Collection+BinarySearch.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				57DDB2532317FD4600B839DA /* CollectionFindMatchTests.swift */,
+				57AC38EF2356F75700B76322 /* CollectionBinarySearchTests.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -683,6 +689,7 @@
 				57DDB2502317FBF800B839DA /* Collection+FindMatch.swift in Sources */,
 				5714D2E923509E2100CA8573 /* Array+Quicksort.swift in Sources */,
 				572963B0231D031B006A7A00 /* LinkedList.swift in Sources */,
+				57AC38EE2356F58300B76322 /* Collection+BinarySearch.swift in Sources */,
 				57CB760723042EAB00000035 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +706,7 @@
 				57A133C0234CA78F006BA47B /* StackTests.swift in Sources */,
 				572963B4231D0344006A7A00 /* LinkedListTests.swift in Sources */,
 				57A133CC234CB706006BA47B /* BinarySearchTreeTests.swift in Sources */,
+				57AC38F02356F75700B76322 /* CollectionBinarySearchTests.swift in Sources */,
 				5714D2E62350943300CA8573 /* ArrayHeapsortTests.swift in Sources */,
 				57DDB2542317FD4600B839DA /* CollectionFindMatchTests.swift in Sources */,
 				57A133C6234CAB37006BA47B /* QueueTests.swift in Sources */,
