@@ -15,6 +15,10 @@ struct Queue<Item> {
     
     private var items: [Item] = []
     
+    /// A Boolean value indicating whether the queue is empty.
+    /// - Complexity: O(1)
+    var isEmpty: Bool { items.isEmpty }
+    
     /// Adds `item` to the end of the queue
     /// - Parameter item: the item to be added to the queue
     /// - Complexity: O(1) on average

@@ -10,12 +10,29 @@ import Foundation
 
 extension Graph {
     
-    struct Vertex<T: Hashable> {
-        let data: T
+    class Vertex<Data: Hashable> {
+        let data: Data
+        var traversalState: TraversalState
+        
+        init(data: Data) {
+            self.data = data
+            self.traversalState = .notDiscovered
+        }
     }
 }
 
-// MARK: Hashable
+// MARK: - Traversal state
+
+extension Graph.Vertex {
+    
+    enum TraversalState {
+        case notDiscovered
+        case notVisited
+        case visited
+    }
+}
+
+// MARK: - Hashable
 
 extension Graph.Vertex: Hashable {
     
@@ -23,12 +40,12 @@ extension Graph.Vertex: Hashable {
         hasher.combine(data)
     }
 
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    static func == (lhs: Graph.Vertex<Data>, rhs: Graph.Vertex<Data>) -> Bool {
         lhs.data == rhs.data
     }
 }
 
-// MARK: CustomStringConvertible
+// MARK: - CustomStringConvertible
 
 extension Graph.Vertex: CustomStringConvertible {
     

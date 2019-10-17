@@ -27,4 +27,17 @@ class QueueTests: XCTestCase {
         
         XCTAssertNil(queue.dequeue(), "Empty queue should return nil.")
     }
+    
+    func testEmptyQueue() {
+        var queue = Queue<Int>()
+        XCTAssertTrue(queue.isEmpty)
+        
+        queue.enqueue(1)
+        queue.enqueue(2)
+        XCTAssertFalse(queue.isEmpty)
+        
+        _ = queue.dequeue()
+        _ = queue.dequeue()
+        XCTAssertTrue(queue.isEmpty)
+    }
 }

@@ -10,10 +10,16 @@ import Foundation
 
 extension Graph {
     
-    struct Edge<T: Hashable> {
-        let source: Vertex<T>
-        let destination: Vertex<T>
+    class Edge<Data: Hashable> {
+        let source: Vertex<Data>
+        let destination: Vertex<Data>
         let weight: Double?
+        
+        init(source: Vertex<Data>, destination: Vertex<Data>, weight: Double?) {
+            self.source = source
+            self.destination = destination
+            self.weight = weight
+        }
     }
 }
 
@@ -35,7 +41,7 @@ extension Graph.Edge: Hashable {
         hasher.combine("\(source)\(destination)\(weight ?? 0)")
     }
     
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    static func == (lhs: Graph.Edge<Data>, rhs: Graph.Edge<Data>) -> Bool {
         lhs.source == rhs.source &&
             lhs.destination == rhs.destination &&
             lhs.weight == rhs.weight

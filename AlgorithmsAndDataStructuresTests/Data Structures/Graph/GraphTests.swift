@@ -42,4 +42,21 @@ class GraphTests: XCTestCase {
     override func tearDown() {
         graph = nil
     }
+    
+    // MARK: - Traversal
+    
+    func testThatBFSVisitsAllVertices() {
+        var counter = 0
+        graph.breadthFirstSearch { _ in counter += 1 }
+        
+        XCTAssertEqual(counter, 8, "Incorrect number of vertices visited.")
+    }
+    
+    func testBFSOnEmptyGraph() {
+        var counter = 0
+        let emptyGraph = Graph<Int>()
+        emptyGraph.breadthFirstSearch { _ in counter += 1 }
+        
+        XCTAssertEqual(counter, 0, "Empty graph does not contain vertices to visit.")
+    }
 }
