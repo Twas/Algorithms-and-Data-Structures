@@ -95,27 +95,17 @@ extension Graph {
         var queue = Queue<Vertex<Data>>()
         queue.enqueue(startingVertex)
         
-        while !queue.isEmpty {
-            guard let currentVertex = queue.dequeue(),
-                let edges = edges(from: currentVertex) else {
-                break
-            }
-            
+        while let currentVertex = queue.dequeue() {
             // add unvisited vertices to the queue
-            for edge in edges where edge.destination.traversalState == .notDiscovered {
+            let vertexEdges = edges(from: currentVertex) ?? []
+            for edge in vertexEdges where edge.destination.traversalState == .notDiscovered {
                 edge.destination.traversalState = .notVisited
                 queue.enqueue(edge.destination)
             }
             
+            // process current vertex
             currentVertex.traversalState = .visited
             vertexHandler?(currentVertex)
         }
     }
 }
-
-// Austin Texas - notVisited
-// Detroit - notVisited
-// Washington DC - notVisited
-// San Fransisco - notVisited
-// Tokyo - notVisited
-// Todyo - visited
