@@ -59,4 +59,19 @@ class GraphTests: XCTestCase {
         
         XCTAssertEqual(counter, 0, "Empty graph does not contain vertices to visit.")
     }
+    
+    func testThatDFSVisitsAllVertices() {
+        var counter = 0
+        graph.depthFirstSearch { _ in counter += 1 }
+        
+        XCTAssertEqual(counter, 8, "Incorrect number of vertices visited.")
+    }
+    
+    func testDFSOnEmptyGraph() {
+        var counter = 0
+        let emptyGraph = Graph<Int>()
+        emptyGraph.depthFirstSearch { _ in counter += 1 }
+        
+        XCTAssertEqual(counter, 0, "Empty graph does not contain vertices to visit.")
+    }
 }

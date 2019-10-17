@@ -108,4 +108,27 @@ extension Graph {
             vertexHandler?(currentVertex)
         }
     }
+    
+    /// Visits each vertex of the graph so that neighbour's neighbours (etc.) are visited before direct neighbours.
+    /// - Parameter vertexHandler: This closure is called for each vertex when it is visited.
+    /// - Complexity: O(*V* +* E*) where *V* is the number of vertices and *E* is the number of edges.
+    func depthFirstSearch(vertexHandler: VertexHandler?) {
+        guard let startingVertex = adjacencyDict.keys.first else { return }
+        
+        var stack = Stack<Vertex<Data>>()
+        stack.push(startingVertex)
+        
+        while let currentVertex = stack.pop() {
+            // add unvisited vertices to the stack
+            let vertexEdges = edges(from: currentVertex) ?? []
+            for edge in vertexEdges where edge.destination.traversalState == .notDiscovered {
+                edge.destination.traversalState = .notVisited
+                stack.push(edge.destination)
+            }
+            
+            // process current vertex
+            currentVertex.traversalState = .visited
+            vertexHandler?(currentVertex)
+        }
+    }
 }
