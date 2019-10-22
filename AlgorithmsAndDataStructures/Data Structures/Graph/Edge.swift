@@ -32,18 +32,3 @@ extension Graph.Edge {
         case undirected
     }
 }
-
-// MARK: Hashable
-
-extension Graph.Edge: Hashable {
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine("\(source)\(destination)\(weight ?? 0)")
-    }
-    
-    static func == (lhs: Graph.Edge<Data>, rhs: Graph.Edge<Data>) -> Bool {
-        lhs.source == rhs.source &&
-            lhs.destination == rhs.destination &&
-            lhs.weight == rhs.weight
-    }
-}

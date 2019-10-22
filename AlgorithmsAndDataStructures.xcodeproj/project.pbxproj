@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		570D4571235ED662002030DB /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570D4570235ED662002030DB /* Dijkstra.swift */; };
+		570D4574235EDC67002030DB /* DijkstraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570D4573235EDC67002030DB /* DijkstraTests.swift */; };
 		5714D2E3235092A600CA8573 /* Array+Heapsort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714D2E2235092A600CA8573 /* Array+Heapsort.swift */; };
 		5714D2E62350943300CA8573 /* ArrayHeapsortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714D2E52350943300CA8573 /* ArrayHeapsortTests.swift */; };
 		5714D2E923509E2100CA8573 /* Array+Quicksort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714D2E823509E2100CA8573 /* Array+Quicksort.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		570D4570235ED662002030DB /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		570D4573235EDC67002030DB /* DijkstraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraTests.swift; sourceTree = "<group>"; };
 		5714D2E2235092A600CA8573 /* Array+Heapsort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Heapsort.swift"; sourceTree = "<group>"; };
 		5714D2E52350943300CA8573 /* ArrayHeapsortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayHeapsortTests.swift; sourceTree = "<group>"; };
 		5714D2E823509E2100CA8573 /* Array+Quicksort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Quicksort.swift"; sourceTree = "<group>"; };
@@ -131,6 +135,22 @@
 				931AD845268A44E636B73D94 /* Pods_AlgorithmsAndDataStructuresTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		570D456F235ED649002030DB /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				570D4570235ED662002030DB /* Dijkstra.swift */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		570D4572235EDC57002030DB /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				570D4573235EDC67002030DB /* DijkstraTests.swift */,
+			);
+			path = Path;
 			sourceTree = "<group>";
 		};
 		5714D2DF2350927800CA8573 /* Heapsort */ = {
@@ -351,6 +371,7 @@
 		57CB75F9230428B200000035 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				570D456F235ED649002030DB /* Path */,
 				57DDB24D2317FBAB00B839DA /* Search */,
 				57DCB6D2230BDD42007AEE63 /* Sorting */,
 			);
@@ -372,6 +393,7 @@
 		57CB75FC230428D700000035 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				570D4572235EDC57002030DB /* Path */,
 				57DDB2512317FD2E00B839DA /* Search */,
 				57DCB6D3230BDD55007AEE63 /* Sorting */,
 			);
@@ -709,6 +731,7 @@
 				57A133BC234CA776006BA47B /* Stack.swift in Sources */,
 				5714D2E3235092A600CA8573 /* Array+Heapsort.swift in Sources */,
 				57CB75CE2304283100000035 /* AppDelegate.swift in Sources */,
+				570D4571235ED662002030DB /* Dijkstra.swift in Sources */,
 				57F90D81234F0FFC006E1EFC /* Heap.swift in Sources */,
 				57A6DFBD230D214D0090B420 /* Array+BubbleSort.swift in Sources */,
 				57CB760123042BDC00000035 /* Array+InsertionSort.swift in Sources */,
@@ -742,6 +765,7 @@
 				5714D2E62350943300CA8573 /* ArrayHeapsortTests.swift in Sources */,
 				57DDB2542317FD4600B839DA /* CollectionFindMatchTests.swift in Sources */,
 				57A133C6234CAB37006BA47B /* QueueTests.swift in Sources */,
+				570D4574235EDC67002030DB /* DijkstraTests.swift in Sources */,
 				57F90D84234F199E006E1EFC /* HeapTests.swift in Sources */,
 				57A6DFC0230D21900090B420 /* ArrayBubbleSortTests.swift in Sources */,
 			);

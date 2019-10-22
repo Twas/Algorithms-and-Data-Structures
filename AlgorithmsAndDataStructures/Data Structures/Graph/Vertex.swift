@@ -44,10 +44,3 @@ extension Graph.Vertex: Hashable {
         lhs.data == rhs.data
     }
 }
-
-// MARK: - CustomStringConvertible
-
-extension Graph.Vertex: CustomStringConvertible {
-    
-    var description: String { "\(data)" }
-}

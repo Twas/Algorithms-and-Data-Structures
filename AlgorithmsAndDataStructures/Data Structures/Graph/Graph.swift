@@ -39,14 +39,6 @@ class Graph<Data: Hashable> {
         }
     }
     
-    func weight(from source: Vertex<Data>, to destination: Vertex<Data>) -> Double? {
-        guard let edges = adjacencyDict[source] else { return nil }
-        
-        let edge = edges.first(where: { $0.destination == destination })
-        
-        return edge?.weight
-    }
-    
     func edges(from source: Vertex<Data>) -> [Edge<Data>]? {
         adjacencyDict[source]
     }
